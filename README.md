@@ -117,6 +117,15 @@ Now if you go to [http://localhost:3000/posts/1](http://localhost:3000/posts/1),
 { "id": 1, "title": "json-server", "author": "typicode" }
 ```
 
+Start server on port 8080
+```
+json-server --port 8080 --routes routes.json --watch db.json 
+``` 
+Now if you go to [http://localhost:8080/posts/1](http://localhost:3000/posts/1), you'll get
+
+```json
+{ "id": 1, "title": "json-server", "author": "typicode" }
+```
 Also when doing requests, it's good to know that:
 
 - If you make POST, PUT, PATCH or DELETE requests, changes will be automatically and safely saved to `db.json` using [lowdb](https://github.com/typicode/lowdb).
